@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F3EFEF"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/img_cardgrid"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"></ImageView>
+
+        <TextView
+            android:id="@+id/txttencardgrid"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Shoes"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/txttentheloaicardgrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:text="Shoes"></TextView>
+
+        <TextView
+            android:id="@+id/txt_giacardgrid"
+            android:layout_width="200dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Shoes"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textSize="16dp"></TextView>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
