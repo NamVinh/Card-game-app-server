@@ -20,10 +20,11 @@ const apiRoutes = (passport) => {
 
   // User API
   router.post("/login", userController.loginUser);
+  router.get("/users", userController.getUser);
   router.get("/user",jwtAuthenticated, userController.getUserIsLoggedIn); //Get user is logged in
-  router.get("/users/:id",jwtAuthenticated, userController.getUserById);
-  router.post("/user/add",jwtAuthenticated, userController.createAccount);
-  router.post("/user/update/:id",jwtAuthenticated, userController.updateAccount);
+  router.get("/users/:id", userController.getUserById);
+  router.post("/user/add", userController.createAccount);
+  router.post("/user/update/:id", userController.updateAccount);
   return router;
 };
 module.exports = apiRoutes;

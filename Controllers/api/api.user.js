@@ -18,7 +18,14 @@ const loginUser = async (req, res) => {
     }
   }
 };
-
+const getUser = async (req, res) => {
+  try {
+    let usersData = await User.find();
+    return res.status(200).json({ status: true, data: usersData });
+  } catch (error) {
+    return res.status(200).json({ status: false, msg: error.message });
+  }
+};
 const getUserById = async (req, res) => {
   try {
     let usersData = await User.findById(req.params.id).select("-password -__v");
@@ -29,7 +36,7 @@ const getUserById = async (req, res) => {
 };
 const getUserIsLoggedIn = async (req, res) => {
   try {
-    let usersData = await User.findById(req.user._id).select("-password -__v");
+    let usersData = await User.findById(req.user._id);
     return res.status(200).json({ status: true, data: usersData });
   } catch (error) {
     return res.status(200).json({ status: false, msg: error.message });
@@ -78,4 +85,5 @@ module.exports = {
   createAccount,
   updateAccount,
   loginUser,
+  getUser
 };
